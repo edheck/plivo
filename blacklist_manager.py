@@ -30,7 +30,7 @@ class BlacklistManager(object):
             self.redis_client.hset(BlacklistManager._REDIS_BLACKLIST_HASH, from_to_pair,
                                    current_timestamp)
         else:
-            if blacklist_start_timestamp + BlacklistManager._FOUR_HOURS <= current_timestamp:
+            if int(blacklist_start_timestamp) + BlacklistManager._FOUR_HOURS <= current_timestamp:
                 self.redis_client.hset(BlacklistManager._REDIS_BLACKLIST_HASH, from_to_pair, current_timestamp)
 
     def blacklist(self, from_number, to_number):
