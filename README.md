@@ -6,17 +6,17 @@ For deployment either provide your aws account credentials so that
 this could be deployed there OR follow the following steps for local deployment
 
 # install and start redis server
-wget http://download.redis.io/redis-stable.tar.gz
-tar xvzf redis-stable.tar.gz
-cd redis-stable
-make
-./redis-server
+1) wget http://download.redis.io/redis-stable.tar.gz
+2) tar xvzf redis-stable.tar.gz
+3) cd redis-stable
+4) make
+5) ./redis-server
 
 # install and start postgres server, assuming mac, on another terminal, after downloading your data_dump
-brew install postgresql
-initdb -D /usr/local/var/postgres
-pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
-psql -U postgres -d postgres < data_dump
+1) brew install postgresql
+2) initdb -D /usr/local/var/postgres
+3) pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+4) psql -U postgres -d postgres < data_dump
 
 # start the app server
 1) git clone https://github.com/edheck/plivo.git
