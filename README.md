@@ -23,7 +23,7 @@ this could be deployed there OR follow the following steps for local deployment
 2) cd plivo
 3) virtualenv .
 4) source bin/activate
-5) pip install requirements.txt
+5) pip install -r requirements.txt
 6) python app.py
 
 By now, the app should be up and running.
